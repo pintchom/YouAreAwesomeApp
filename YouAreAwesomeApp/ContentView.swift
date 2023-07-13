@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var titleText = ["You are Awesome!", "You are Great!"]
+    @State private var titleText = ["", "You are Great!"]
     @State private var index = 0
     
     var body: some View {
@@ -27,6 +27,7 @@ struct ContentView: View {
                     index = 0
                 }
             }
+            .buttonStyle(.borderedProminent)
         }
         .padding()
     }
