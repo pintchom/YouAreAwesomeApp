@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var titleText = ["", "You are Great!"]
+    @State private var titleText = ["", "You are Great!", "You are Awesome"]
     @State private var index = 0
     
     var body: some View {
@@ -20,12 +20,12 @@ struct ContentView: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color.orange)
                 .padding()
-            Button("Press Me!") {
-                if index == 0 {
-                    index = 1
-                } else {
-                    index = 0
-                }
+            Button("Great") {
+                index = 1
+            }
+            .buttonStyle(.borderedProminent)
+            Button("Awesome") {
+                index = 2
             }
             .buttonStyle(.borderedProminent)
         }
