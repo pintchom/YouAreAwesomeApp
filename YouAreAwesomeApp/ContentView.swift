@@ -8,20 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var titleText = ["You are Awesome!", "You are Great!"]
+    @State private var index = 0
+    
     var body: some View {
         VStack {
-            Image(systemName: "swift")
-                .resizable()
-                .scaledToFit()
-                .padding()
-                .background(.gray)
-                .foregroundColor(.orange)
-            Text("You Are Awesome!")
+
+            Text(titleText[index])
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(Color.orange)
                 .padding()
-                .background(.gray)
+            Button("Press Me!") {
+                if index == 0 {
+                    index = 1
+                } else {
+                    index = 0
+                }
+            }
         }
         .padding()
     }
