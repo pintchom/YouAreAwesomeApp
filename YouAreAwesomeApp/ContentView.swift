@@ -20,14 +20,16 @@ struct ContentView: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color.orange)
                 .padding()
-            Button("Great") {
-                index = 1
-            }
-            .buttonStyle(.borderedProminent)
+            HStack {
+                Button("Great") {
+                    index = 1
+                }
+                .buttonStyle(.borderedProminent)
             Button("Awesome") {
                 index = 2
             }
             .buttonStyle(.borderedProminent)
+            }
         }
         .padding()
     }
