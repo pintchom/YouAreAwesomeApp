@@ -20,6 +20,20 @@ struct ContentView: View {
                 
                 VStack {
                     
+                    Group {
+                        Text("More Text")
+                        Text("More Text")
+                        Text("More Text")
+                        Text("More Text")
+                        Text("More Text")// BREAKING POINT
+                        Text("More Text")
+                        Text("More Text")
+                        Text("More Text")
+                        Text("More Text")
+                        Text("More Text")
+                        // Text("More Text")// BREAKING POINT
+                    }
+                    
                     Spacer()
                     
                     Text(titleText[index])
@@ -30,7 +44,7 @@ struct ContentView: View {
                         .foregroundColor(Color.red)
                         .frame(height: 150)
                         .frame(maxWidth: .infinity)
-        //                .border(Color("Maroon-BC"), width: 5)
+                    //                .border(Color("Maroon-BC"), width: 5)
                     
                     Spacer()
                     
