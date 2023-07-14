@@ -13,50 +13,53 @@ struct ContentView: View {
     @State private var index = 0
     
     var body: some View {
-        VStack {
+        ZStack {
             
-            Text("You Have Skills!")
-                .font(.largeTitle)
-                .fontWeight(.black)
-                .foregroundColor(Color("Gold-BC"))
-                .padding()
-                .background(Color("Maroon-BC"))
-                .cornerRadius(30)
+            Color("SkyBlue")
+                .ignoresSafeArea()
             
-            Spacer()
-            
-            Text(titleText[index])
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .minimumScaleFactor(0.5)
-                .multilineTextAlignment(.center)
-                .foregroundColor(Color.red)
-                .frame(height: 150)
-                .frame(maxWidth: .infinity)
-                .border(Color("Maroon-BC"), width: 5)
-            
-            Spacer()
-            Spacer()
-            
-            HStack {
-                Button("Great") {
-                    index = 1
-                }
-                .buttonStyle(.borderedProminent)
+            VStack {
+                
+                Text("You Have Skills!")
+                    .font(.largeTitle)
+                    .fontWeight(.black)
+                    .foregroundColor(Color("Gold-BC"))
+                    .padding()
+                    .background(Color("Maroon-BC"))
+                    .cornerRadius(30)
                 
                 Spacer()
                 
-                Button("Awesome") {
-                    index = 2
+                Text(titleText[index])
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .minimumScaleFactor(0.5)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color.red)
+                    .frame(height: 150)
+                    .frame(maxWidth: .infinity)
+    //                .border(Color("Maroon-BC"), width: 5)
+                
+                Spacer()
+                Spacer()
+                
+                HStack {
+                    Button("Great") {
+                        index = 1
+                    }
+                    .buttonStyle(.borderedProminent)
+                    
+                    Spacer()
+                    
+                    Button("Awesome") {
+                        index = 2
+                    }
+                    .buttonStyle(.borderedProminent)
                 }
-                .buttonStyle(.borderedProminent)
+                .tint(Color("Vermillion"))
             }
-            .tint(Color("Vermillion"))
+            .padding()
         }
-        .padding()
-        .background(Color("SkyBlue"))
-        
-        
     }
 }
 
