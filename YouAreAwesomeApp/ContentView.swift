@@ -18,9 +18,9 @@ struct ContentView: View {
             Text("You Have Skills!")
                 .font(.largeTitle)
                 .fontWeight(.black)
-                .foregroundColor(.white)
+                .foregroundColor(Color("Gold-BC"))
                 .padding()
-                .background(.purple)
+                .background(Color("Maroon-BC"))
                 .cornerRadius(30)
             
             Spacer()
@@ -33,7 +33,7 @@ struct ContentView: View {
                 .foregroundColor(Color.red)
                 .frame(height: 150)
                 .frame(maxWidth: .infinity)
-                .border(.orange, width: 1)
+                .border(Color("Maroon-BC"), width: 5)
             
             Spacer()
             Spacer()
@@ -51,9 +51,11 @@ struct ContentView: View {
                 }
                 .buttonStyle(.borderedProminent)
             }
-            .border(.orange, width: 5)
+            .tint(Color("Vermillion"))
         }
         .padding()
+        .background(Color("SkyBlue"))
+        
         
     }
 }
