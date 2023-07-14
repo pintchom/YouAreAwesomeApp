@@ -17,7 +17,7 @@ struct ContentView: View {
             
             Rectangle()
                 .fill(
-                    Gradient(colors: [.red, .white, .blue])
+                    RadialGradient(colors: [.red, .white, .blue], center: .center, startRadius: 50, endRadius: 300)
                 )
                 .ignoresSafeArea()
             
