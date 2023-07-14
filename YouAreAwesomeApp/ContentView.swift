@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var titleText = ["Hey There!", "You are Great!", "You are Awesome!"]
+    @State private var titleText = ["When the genius bar needs help they need you", "You are Great!", "You are Awesome!"]
     @State private var index = 0
     
     var body: some View {
-        VStack (spacing: 0) {
+        VStack {
             
             Text(titleText[index])
                 .font(.largeTitle)
@@ -21,9 +21,11 @@ struct ContentView: View {
                 .minimumScaleFactor(0.5)
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color.red)
-            //                .padding()
-            //                .frame(width: 300, height: 150)
+                .frame(height: 150)
+                .frame(maxWidth: .infinity)
                 .border(.orange, width: 1)
+                .ignoresSafeArea(.all)
+                .padding()
             
             HStack {
                 Button("Great") {
