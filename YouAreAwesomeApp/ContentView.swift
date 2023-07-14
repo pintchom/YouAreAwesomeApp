@@ -13,50 +13,54 @@ struct ContentView: View {
     @State private var index = 0
     
     var body: some View {
-        ZStack {
+        
+        GeometryReader { geo in
             
-            VStack {
+            ZStack {
                 
-                Spacer()
-                
-                Text(titleText[index])
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .minimumScaleFactor(0.5)
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Color.red)
-                    .frame(height: 150)
-                    .frame(maxWidth: .infinity)
-    //                .border(Color("Maroon-BC"), width: 5)
-                
-                Spacer()
-                
-                Divider()
-                    .background(.black)
-                    .padding()
-                    .frame(width: 150.0)
-                
-                Rectangle()
-                    .fill(.indigo)
-                    .frame(width: 175, height: 1)
-                
-                HStack {
-                    Button("Great") {
-                        index = 1
-                    }
-                    .buttonStyle(.borderedProminent)
+                VStack {
                     
                     Spacer()
                     
+                    Text(titleText[index])
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .minimumScaleFactor(0.5)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Color.red)
+                        .frame(height: 150)
+                        .frame(maxWidth: .infinity)
+        //                .border(Color("Maroon-BC"), width: 5)
                     
-                    Button("Awesome") {
-                        index = 2
+                    Spacer()
+                    
+                    Divider()
+                        .background(.black)
+                        .padding()
+                        .frame(width: 150.0)
+                    
+                    Rectangle()
+                        .fill(.indigo)
+                        .frame(width: geo.size.width * (0.667), height: 1)
+                    
+                    HStack {
+                        Button("Great") {
+                            index = 1
+                        }
+                        .buttonStyle(.borderedProminent)
+                        
+                        Spacer()
+                        
+                        
+                        Button("Awesome") {
+                            index = 2
+                        }
+                        .buttonStyle(.borderedProminent)
                     }
-                    .buttonStyle(.borderedProminent)
+                    .tint(Color("Vermillion"))
                 }
-                .tint(Color("Vermillion"))
+                .padding()
             }
-            .padding()
         }
     }
 }
