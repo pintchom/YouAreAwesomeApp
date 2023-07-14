@@ -15,6 +15,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             
+            Spacer()
+            
             Text(titleText[index])
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -33,6 +35,9 @@ struct ContentView: View {
                     index = 1
                 }
                 .buttonStyle(.borderedProminent)
+                
+                Spacer()
+                
                 Button("Awesome") {
                     index = 2
                 }
