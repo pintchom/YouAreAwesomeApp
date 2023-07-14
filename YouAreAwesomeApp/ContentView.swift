@@ -24,8 +24,9 @@ struct ContentView: View {
                 .frame(height: 150)
                 .frame(maxWidth: .infinity)
                 .border(.orange, width: 1)
-                .ignoresSafeArea(.all)
                 .padding()
+            
+            Spacer()
             
             HStack {
                 Button("Great") {
