@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var titleText = ["When the genius bar needs help, they call you", "You are Great!", "You are Awesome!"]
+    @State private var titleText = ["Namaste", "You are Great!", "You are Awesome!"]
     @State private var index = 0
     
     var body: some View {
@@ -20,16 +20,13 @@ struct ContentView: View {
                 
                 VStack {
                     
-                    Group {
-                        Text("More Text")
-                        Text("More Text")
-                        Text("More Text")
-                        Text("More Text")
-                    }
-                    .font(.title)
-                    .fontWeight(.heavy)
-                    
                     Spacer()
+                    
+                    Image(systemName: "figure.mind.and.body")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.pink)
+                    
                     
                     Text(titleText[index])
                         .font(.largeTitle)
@@ -39,18 +36,8 @@ struct ContentView: View {
                         .foregroundColor(Color.red)
                         .frame(height: 150)
                         .frame(maxWidth: .infinity)
-                    //                .border(Color("Maroon-BC"), width: 5)
                     
                     Spacer()
-                    
-                    Divider()
-                        .background(.black)
-                        .padding()
-                        .frame(width: 150.0)
-                    
-                    Rectangle()
-                        .fill(.indigo)
-                        .frame(width: geo.size.width * (0.667), height: 1)
                     
                     HStack {
                         Button("Great") {
