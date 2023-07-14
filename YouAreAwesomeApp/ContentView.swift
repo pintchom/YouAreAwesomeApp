@@ -9,27 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var titleText = ["When the genius bar needs help they need you", "You are Great!", "You are Awesome!"]
+    @State private var titleText = ["When the genius bar needs help, they call you", "You are Great!", "You are Awesome!"]
     @State private var index = 0
     
     var body: some View {
         ZStack {
             
-            Rectangle()
-                .fill(
-                    LinearGradient(colors: [.red, .blue], startPoint: .leading, endPoint: .trailing)
-                )
-                .ignoresSafeArea()
-            
             VStack {
-                
-                Text("You Have Skills!")
-                    .font(.largeTitle)
-                    .fontWeight(.black)
-                    .foregroundColor(Color("Gold-BC"))
-                    .padding()
-                    .background(Color("Maroon-BC"))
-                    .cornerRadius(30)
                 
                 Spacer()
                 
@@ -44,7 +30,15 @@ struct ContentView: View {
     //                .border(Color("Maroon-BC"), width: 5)
                 
                 Spacer()
-                Spacer()
+                
+                Divider()
+                    .background(.black)
+                    .padding()
+                    .frame(width: 150.0)
+                
+                Rectangle()
+                    .fill(.indigo)
+                    .frame(width: 175, height: 1)
                 
                 HStack {
                     Button("Great") {
@@ -53,6 +47,7 @@ struct ContentView: View {
                     .buttonStyle(.borderedProminent)
                     
                     Spacer()
+                    
                     
                     Button("Awesome") {
                         index = 2
