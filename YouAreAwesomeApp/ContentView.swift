@@ -17,7 +17,7 @@ struct ContentView: View {
             
             Rectangle()
                 .fill(
-                    AngularGradient(colors: [.red, .white, .blue, .pink, .green, .orange, .purple], center: .center)
+                    LinearGradient(colors: [.red, .blue], startPoint: .leading, endPoint: .trailing)
                 )
                 .ignoresSafeArea()
             
