@@ -29,6 +29,7 @@ struct ContentView: View {
                 .padding()
             
             Spacer()
+            Spacer()
             
             HStack {
                 Button("Great") {
