@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var titleText = ["", "You are Great!", "You are Awesome"]
+    @State private var titleText = ["Hey There!", "You are Great!", "You are Awesome!"]
     @State private var index = 0
     
     var body: some View {
@@ -18,8 +18,11 @@ struct ContentView: View {
             Text(titleText[index])
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .foregroundColor(Color.orange)
+                .foregroundColor(Color.red)
                 .padding()
+                .frame(width: 300, height: 150)
+                .border(.orange, width: 1)
+            
             HStack {
                 Button("Great") {
                     index = 1
