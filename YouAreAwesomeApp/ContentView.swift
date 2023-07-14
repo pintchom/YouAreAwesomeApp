@@ -15,7 +15,10 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             
-            Color("SkyBlue")
+            Rectangle()
+                .fill(
+                    Gradient(colors: [.red, .white, .blue])
+                )
                 .ignoresSafeArea()
             
             VStack {
