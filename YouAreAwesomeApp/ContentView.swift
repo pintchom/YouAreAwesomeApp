@@ -15,6 +15,14 @@ struct ContentView: View {
     var body: some View {
         VStack {
             
+            Text("You Have Skills!")
+                .font(.largeTitle)
+                .fontWeight(.black)
+                .foregroundColor(.white)
+                .padding()
+                .background(.purple)
+                .cornerRadius(30)
+            
             Spacer()
             
             Text(titleText[index])
@@ -26,7 +34,6 @@ struct ContentView: View {
                 .frame(height: 150)
                 .frame(maxWidth: .infinity)
                 .border(.orange, width: 1)
-                .padding()
             
             Spacer()
             Spacer()
@@ -47,6 +54,7 @@ struct ContentView: View {
             .border(.orange, width: 5)
         }
         .padding()
+        
     }
 }
 
