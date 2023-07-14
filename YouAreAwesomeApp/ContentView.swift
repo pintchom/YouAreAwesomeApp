@@ -13,16 +13,16 @@ struct ContentView: View {
     @State private var index = 0
     
     var body: some View {
-        VStack {
-
+        VStack (spacing: 0) {
+            
             Text(titleText[index])
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .minimumScaleFactor(0.5)
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color.red)
-                .padding()
-                .frame(width: 300, height: 150)
+            //                .padding()
+            //                .frame(width: 300, height: 150)
                 .border(.orange, width: 1)
             
             HStack {
@@ -30,11 +30,12 @@ struct ContentView: View {
                     index = 1
                 }
                 .buttonStyle(.borderedProminent)
-            Button("Awesome") {
-                index = 2
+                Button("Awesome") {
+                    index = 2
+                }
+                .buttonStyle(.borderedProminent)
             }
-            .buttonStyle(.borderedProminent)
-            }
+            .border(.orange, width: 5)
         }
         .padding()
     }
