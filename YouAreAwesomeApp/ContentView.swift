@@ -25,14 +25,9 @@ struct ContentView: View {
                         Text("More Text")
                         Text("More Text")
                         Text("More Text")
-                        Text("More Text")// BREAKING POINT
-                        Text("More Text")
-                        Text("More Text")
-                        Text("More Text")
-                        Text("More Text")
-                        Text("More Text")
-                        // Text("More Text")// BREAKING POINT
                     }
+                    .font(.title)
+                    .fontWeight(.heavy)
                     
                     Spacer()
                     
