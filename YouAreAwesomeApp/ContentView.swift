@@ -26,8 +26,10 @@ struct ContentView: View {
                     .foregroundColor(.pink)
                     .border(.pink)
                     .frame(width: 200, height: 300)
-                
+                    .clipped()
                     .border(.blue)
+                    
+                
                 Text(titleText[index])
                     .font(.largeTitle)
                     .fontWeight(.bold)
