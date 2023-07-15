@@ -27,7 +27,12 @@ struct ContentView: View {
                     .padding()
                     .background(Color(hue: 0.582, saturation: 0.354, brightness: 0.998))
                     .cornerRadius(30)
-                
+                    .shadow(color: .gray, radius: 40, x: 20, y: 20)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 30)
+                            .stroke(Color("SkyBlue"), lineWidth: 5)
+                    )
+ 
                     
                 
                 Text(titleText[index])
