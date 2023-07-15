@@ -16,48 +16,48 @@ struct ContentView: View {
         
         GeometryReader { geo in
             
-            ZStack {
+            VStack {
                 
-                VStack {
-                    
-                    Spacer()
-                    
-                    Image(systemName: "figure.mind.and.body")
-                        .resizable()
-                        .scaledToFit()
-                        .foregroundColor(.pink)
-                        .border(.pink)
-                    
-                    Text(titleText[index])
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .minimumScaleFactor(0.5)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color.red)
-                        .frame(height: 150)
-                        .frame(maxWidth: .infinity)
-                        .border(.blue)
-                    
-                    Spacer()
-                    
-                    HStack {
-                        Button("Great") {
-                            index = 1
-                        }
-                        .buttonStyle(.borderedProminent)
-                        
-                        Spacer()
-                        
-                        
-                        Button("Awesome") {
-                            index = 2
-                        }
-                        .buttonStyle(.borderedProminent)
+                Spacer()
+                
+                Image(systemName: "figure.mind.and.body")
+                    .resizable()
+                    .scaledToFill()
+                    .foregroundColor(.pink)
+                    .border(.pink)
+                    .frame(width: 200, height: 300)
+                
+                    .border(.blue)
+                Text(titleText[index])
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .minimumScaleFactor(0.5)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color.red)
+                    .frame(height: 150)
+                    .frame(maxWidth: .infinity)
+                    .border(.blue)
+                
+                Spacer()
+                
+                HStack {
+                    Button("Great") {
+                        index = 1
                     }
-                    .tint(Color("Vermillion"))
+                    .buttonStyle(.borderedProminent)
+                    
+                    Spacer()
+                    
+                    
+                    Button("Awesome") {
+                        index = 2
+                    }
+                    .buttonStyle(.borderedProminent)
                 }
-                .padding()
+                .tint(Color("Vermillion"))
             }
+            .padding()
+            
         }
     }
 }
