@@ -20,14 +20,12 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Image(systemName: "figure.mind.and.body")
+                Image(systemName: "cloud.sun.rain.fill")
                     .resizable()
-                    .scaledToFill()
-                    .foregroundColor(.pink)
-                    .border(.pink)
-                    .frame(width: 200, height: 300)
-                    .clipped()
-                    .border(.blue)
+                    .scaledToFit()
+                    .symbolRenderingMode(.hierarchical)
+                    .foregroundColor(Color("Maroon-BC"))
+                    .padding()
                     
                 
                 Text(titleText[index])
