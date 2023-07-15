@@ -26,7 +26,7 @@ struct ContentView: View {
                         .resizable()
                         .scaledToFit()
                         .foregroundColor(.pink)
-                    
+                        .border(.pink)
                     
                     Text(titleText[index])
                         .font(.largeTitle)
@@ -36,6 +36,7 @@ struct ContentView: View {
                         .foregroundColor(Color.red)
                         .frame(height: 150)
                         .frame(maxWidth: .infinity)
+                        .border(.blue)
                     
                     Spacer()
                     
