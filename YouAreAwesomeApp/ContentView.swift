@@ -23,9 +23,11 @@ struct ContentView: View {
                 Image(systemName: "cloud.sun.rain.fill")
                     .resizable()
                     .scaledToFit()
-                    .symbolRenderingMode(.palette)
-                    .foregroundStyle(.gray, .orange, .blue)
+                    .symbolRenderingMode(.multicolor)
                     .padding()
+                    .background(Color(hue: 0.582, saturation: 0.354, brightness: 0.998))
+                    .cornerRadius(30)
+                
                     
                 
                 Text(titleText[index])
@@ -36,7 +38,6 @@ struct ContentView: View {
                     .foregroundColor(Color.red)
                     .frame(height: 150)
                     .frame(maxWidth: .infinity)
-                    .border(.blue)
                 
                 Spacer()
                 
