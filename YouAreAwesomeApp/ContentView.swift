@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @State private var titleText = ["Namaste", "You are Great!", "You are Awesome!"]
     @State private var index = 0
+    @State private var speakerVolume = 0.0
     
     var body: some View {
         
@@ -20,7 +21,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Image(systemName: "cloud.sun.rain.fill")
+                Image(systemName: "speaker.wave.3", variableValue: speakerVolume)
                     .resizable()
                     .scaledToFit()
                     .symbolRenderingMode(.multicolor)
@@ -41,8 +42,33 @@ struct ContentView: View {
                     .minimumScaleFactor(0.5)
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color.red)
-                    .frame(height: 150)
+                    .frame(height: 75)
                     .frame(maxWidth: .infinity)
+                
+                HStack {
+                    Button("-") {
+                        if speakerVolume >= 0 {
+                            speakerVolume -= 0.33
+                        }
+                    }
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .buttonStyle(.borderedProminent)
+                    .tint(Color("Vermillion"))
+                    .controlSize(.large)
+                    
+                    Button("+") {
+                        if speakerVolume < 0.99 {
+                            speakerVolume += 0.33
+                        }
+                    }
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .buttonStyle(.borderedProminent)
+                    .tint(Color("Vermillion"))
+                .controlSize(.large)
+                }
+                
                 
                 Spacer()
                 
