@@ -23,8 +23,8 @@ struct ContentView: View {
                 Image(systemName: "cloud.sun.rain.fill")
                     .resizable()
                     .scaledToFit()
-                    .symbolRenderingMode(.hierarchical)
-                    .foregroundColor(Color("Maroon-BC"))
+                    .symbolRenderingMode(.palette)
+                    .foregroundStyle(.gray, .orange, .blue)
                     .padding()
                     
                 
