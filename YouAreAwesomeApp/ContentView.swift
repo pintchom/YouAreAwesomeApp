@@ -9,12 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let person = "Limor"
-    
-    let result = (person == "Limor" ? "Hello, lady Ada!" : "Hello there!")
-    print(result)
-    
-    
+    @State private var titleText = ["You are Great!", "You are Awesome!"]
+    @State private var index = 0
+    @State private var speakerVolume = 0.0
     
     var body: some View {
         
@@ -39,17 +36,10 @@ struct ContentView: View {
                 
                 HStack {
                     Button("Great") {
-                        index = 1
+                        index = index == 0 ? 1 : 0
                     }
                     .buttonStyle(.borderedProminent)
                     
-                    Spacer()
-                    
-                    
-                    Button("Awesome") {
-                        index = 2
-                    }
-                    .buttonStyle(.borderedProminent)
                 }
                 .tint(Color("Vermillion"))
             }
