@@ -9,7 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var titleText = ["Namaste", "You are Great!", "You are Awesome!"]
+    var person = "Limor"
+    
+    switch person {
+    case "Limor": print("Hello, Lady Ada!")
+    case "Grace":  print("Hello, Admiral Hopper!")
+    case "Beyonce": print ("All Hail Queen B!")
+    default: print("Hello there, \(person)")
+    }
+    
+    @State private var titleText = ["", "You are Great!", "You are Awesome!"]
     @State private var index = 0
     @State private var speakerVolume = 0.0
     
@@ -21,20 +30,6 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Image(systemName: "speaker.wave.3", variableValue: speakerVolume)
-                    .resizable()
-                    .scaledToFit()
-                    .symbolRenderingMode(.multicolor)
-                    .padding()
-                    .background(Color(hue: 0.582, saturation: 0.354, brightness: 0.998))
-                    .cornerRadius(30)
-                    .shadow(color: .gray, radius: 40, x: 20, y: 20)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 30)
-                            .stroke(Color("SkyBlue"), lineWidth: 5)
-                    )
- 
-                    
                 
                 Text(titleText[index])
                     .font(.largeTitle)
@@ -44,30 +39,6 @@ struct ContentView: View {
                     .foregroundColor(Color.red)
                     .frame(height: 75)
                     .frame(maxWidth: .infinity)
-                
-                HStack {
-                    Button("-") {
-                        if speakerVolume >= 0 {
-                            speakerVolume -= 0.33
-                        }
-                    }
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .buttonStyle(.borderedProminent)
-                    .tint(Color("Vermillion"))
-                    .controlSize(.large)
-                    
-                    Button("+") {
-                        if speakerVolume < 0.99 {
-                            speakerVolume += 0.33
-                        }
-                    }
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .buttonStyle(.borderedProminent)
-                    .tint(Color("Vermillion"))
-                .controlSize(.large)
-                }
                 
                 
                 Spacer()
