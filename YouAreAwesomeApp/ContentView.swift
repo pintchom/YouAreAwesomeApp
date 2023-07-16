@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var titleText = ["You are Great!", "You are Awesome!"]
     @State private var index = 0
     @State private var speakerVolume = 0.0
+    @State private var imageText = "image2"
     
     var body: some View {
         
@@ -20,6 +21,13 @@ struct ContentView: View {
             VStack {
                 
                 Spacer()
+                
+                Image(imageText)
+                    .resizable()
+                    .scaledToFit()
+                    .cornerRadius(30)
+                    .shadow(radius: 30)
+                    .padding()
                 
                 
                 Text(titleText[index])
@@ -31,17 +39,21 @@ struct ContentView: View {
                     .frame(height: 75)
                     .frame(maxWidth: .infinity)
                 
-                
-                Spacer()
-                
+                            
                 HStack {
-                    Button("Great") {
-                        index = index == 0 ? 1 : 0
+                    Button("Switch image") {
+                        imageText = imageText == "image2" ? "image3" : "image2"
                     }
                     .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+                    .font(.largeTitle)
+                    
+                    
                     
                 }
                 .tint(Color("Vermillion"))
+                
+                Spacer()
             }
             .padding()
             
