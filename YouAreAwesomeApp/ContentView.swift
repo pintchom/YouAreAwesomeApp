@@ -9,18 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var person = "Limor"
+    let person = "Limor"
     
-    switch person {
-    case "Limor": print("Hello, Lady Ada!")
-    case "Grace":  print("Hello, Admiral Hopper!")
-    case "Beyonce": print ("All Hail Queen B!")
-    default: print("Hello there, \(person)")
-    }
+    let result = (person == "Limor" ? "Hello, lady Ada!" : "Hello there!")
+    print(result)
     
-    @State private var titleText = ["", "You are Great!", "You are Awesome!"]
-    @State private var index = 0
-    @State private var speakerVolume = 0.0
+    
     
     var body: some View {
         
