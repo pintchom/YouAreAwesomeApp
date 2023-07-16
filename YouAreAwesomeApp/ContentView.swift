@@ -12,7 +12,9 @@ struct ContentView: View {
     @State private var titleText = ["You are Great!", "You are Awesome!"]
     @State private var index = 0
     @State private var speakerVolume = 0.0
-    @State private var imageText = "image2"
+    @State private var imageNum = 0
+    @State private var imageList = ["image2", "image3", "image4", "image5", "image6", "image8","image9"]
+    @State private var image = ""
     
     var body: some View {
         
@@ -22,7 +24,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Image(imageText)
+                Image(image)
                     .resizable()
                     .scaledToFit()
                     .cornerRadius(30)
@@ -42,7 +44,10 @@ struct ContentView: View {
                             
                 HStack {
                     Button("Switch image") {
-                        imageText = imageText == "image2" ? "image3" : "image2"
+                        
+                        image = imageList[imageNum]
+                        imageNum = imageNum < 6 ? imageNum + 1: 0
+                        
                     }
                     .buttonStyle(.borderedProminent)
                     .controlSize(.large)
